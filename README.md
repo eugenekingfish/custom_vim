@@ -13,3 +13,6 @@
 - [UltiSnips](https://github.com/SirVer/ultisnips)
 - [vim-live-latex-preview](https://github.com/xuhdev/vim-latex-live-preview) (not installed with Vundle in .vimrc)
 
+# my_snips
+
+my_snips contains custom LaTeX macros which interface with UltiSnips. This should be placed inside the `~/.vim` directory.
