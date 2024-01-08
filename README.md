@@ -1,6 +1,6 @@
 # custom_vim
 
-[Plugin Manager](https://github.com/VundleVim/Vundle.vim)
+[Plugin Manager](https://github.com/VundleVim/Vundle.vim) (Vundle)
 
 ## Plugins
 
