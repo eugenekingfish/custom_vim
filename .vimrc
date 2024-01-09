@@ -9,7 +9,6 @@ Plugin 'yggdroot/indentline'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'agude/vim-eldar'
 Plugin 'vim-airline/vim-airline'
-Plugin 'petrushka/vim-gap'
 Plugin 'SirVer/ultisnips'
 call vundle#end()            
 
