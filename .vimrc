@@ -48,7 +48,7 @@ set spelllang=en_gb
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 map qq <Plug>(easymotion-prefix)
-map <F2> :NERDTree<CR>
+map <F2> :NERDTreeToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
