@@ -17,11 +17,13 @@ filetype plugin indent on " default Vundle
 
 colorscheme eldar
 
+set encoding=UTF-8
+set wildmenu " Enables more autocompletion options when pressing TAB in command mode
 set noswapfile nobackup dir =~/tmp 
 set et " Replaces tabs with spaces in insert mode
 set ts=3 " Sets the number of spaces for a tab in insert mode to be 3 (the default is 8)
 set shiftwidth=3 " When using the >> or << commands, sets the shift to be 3 (the same as a tab)
-set nu " Enables line numbers
+set rnu " Enables relative line numbers
 set numberwidth=10 " Adds a left-margin
 
 if has('syntax')
@@ -47,12 +49,20 @@ setlocal spell
 set spelllang=en_gb
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-map qq <Plug>(easymotion-prefix)
+" map qq <Plug>(easymotion-prefix)
+let mapleader = "\\"
 map <F2> :NERDTreeToggle<CR>
+
+let g:markdown_syntax_conceal=0
+let g:vim_json_syntax_conceal = 0
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my_snips"]
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 let g:airline#extensions#tabline#enabled = 1 " Enables better tabs from vim-airline
