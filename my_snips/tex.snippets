@@ -12,6 +12,21 @@ def env(name):
 endglobal
 
 context "math()"
+snippet mu "\mu" iA
+\mu$0
+endsnippet
+
+context "math()"
+snippet lamb "\lambda" iA
+\lambda$0
+endsnippet
+
+context "math()"
+snippet Lamb "\Lambda" iA
+\Lambda$0
+endsnippet
+
+context "math()"
 snippet alp "\alpha" iA
 \alpha$0
 endsnippet
@@ -19,6 +34,11 @@ endsnippet
 context "math()"
 snippet ^ "^{}" iA
 ^{$1}
+endsnippet
+
+context "math()"
+snippet _ "_{}" iA
+_{$1}
 endsnippet
 
 context "math()"
@@ -42,6 +62,11 @@ snippet to "\to" iA
 endsnippet
 
 context "math()"
+snippet maps "\mapsto" iA
+\mapsto
+endsnippet
+
+context "math()"
 snippet if "\text{ if }" 
 \text{ if }
 endsnippet
@@ -60,6 +85,12 @@ context "math()"
 snippet bnom "\binom" iA
 \binom{$1}{$2}
 endsnippet
+
+context "math()"
+snippet sig "\sigma" iA
+\sigma
+endsnippet
+
 context "math()"
 snippet Sig "\Sigma" iA
 \Sigma
@@ -134,9 +165,6 @@ context "math()"
 snippet ety "\varnothing" iA
 \varnothing
 endsnippet
-snippet intg "definite integral" i
-\int $1 \; \mathrm{d}x
-endsnippet
 
 snippet nb "\textbf{NB:}"
 \textbf{NB:} $0
@@ -165,6 +193,16 @@ endsnippet
 context "math()"
 snippet geq "\geq" iA
 \geq$0
+endsnippet
+
+context "math()"
+snippet leq "\leq" iA
+\leq$0
+endsnippet
+
+context "math()"
+snippet neq "\neq" iA
+\neq$0
 endsnippet
 
 context "math()"
@@ -212,7 +250,7 @@ endsnippet
 
 context "math()"
 snippet sum "summation" iA
-\\sum_{ $1 = $2 }^{ $3 } $4
+\\sum_{ $1 } $2
 endsnippet
 
 context "math()"
@@ -247,8 +285,23 @@ snippet it "\textit{}"
 endsnippet
 
 context "math()"
-snippet over "\overline{}" iA
+snippet mat "\mat" iA
+\\mat{$1}{$2}{$3}{$4}
+endsnippet
+
+context "math()"
+snippet ghost "\phantom{}" iA
+\\phantom{$1}
+endsnippet
+
+context "math()"
+snippet overl "\overline{}" iA
 \overline{$1}
+endsnippet
+
+context "math()"
+snippet overs "\overset{}" iA
+\overset{$1}
 endsnippet
 
 snippet sup "\textsuperscript{}" i
@@ -276,10 +329,6 @@ snippet bb "\mathbb{}" iA
 \bb{$1}
 endsnippet
 
-snippet \x "\(x\)" iA
-\(\x\)
-endsnippet
-
 context "math()"
 snippet mc "\mathcal{}" iA
 \mc{$1}
@@ -305,8 +354,23 @@ snippet dcl "\documentclass{}" b
 endsnippet
 
 context "math()"
-snippet op "\oplus" iA
+snippet o+ "\oplus" iA
 \oplus
+endsnippet
+
+context "math()"
+snippet O+ "\bigoplus" iA
+\bigoplus
+endsnippet
+
+context "math()"
+snippet o* "\oplus" iA
+\otimes
+endsnippet
+
+context "math()"
+snippet O* "\bigoplus" iA
+\bigotimes
 endsnippet
 
 priority 10000
