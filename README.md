@@ -31,3 +31,11 @@ If you don't want to install a particular plugin, simply remove the line(s) `Plu
 The `my_snips` directory contains custom LaTeX macros which interface with the UltiSnips plugin. This should be placed inside the `~/.vim` directory if you want to use it, otherwise you can ignore this step. I would strongly encourage you to check out their repository to learn more about this plugin. 
 
 Additionally, if you care about LaTeX, [this](https://castel.dev/post/lecture-notes-1/) is an excellent blog discussing LaTeX snippets.
+
+## My custom binds
+
+`F2` - Open/close the NERDTree explorer.
+`Ctrl + F` - Run fzf
+`tt` - Move to previous tab
+`Space` - easymotion leader key
+
