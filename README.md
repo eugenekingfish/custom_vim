@@ -32,10 +32,10 @@ The `my_snips` directory contains custom LaTeX macros which interface with the U
 
 Additionally, if you care about LaTeX, [this](https://castel.dev/post/lecture-notes-1/) is an excellent blog discussing LaTeX snippets.
 
-## My custom binds
+## Some of my custom binds
 
-`F2` - Open/close the NERDTree explorer.
-`Ctrl + F` - Run fzf
-`tt` - Move to previous tab
-`Space` - easymotion leader key
+- `F2` - Open/close the NERDTree explorer.
+- `Ctrl + F` - Run fzf
+- `tt` - Move to previous tab (rebind from `gT`)
+- `Space` - easymotion leader key
 
