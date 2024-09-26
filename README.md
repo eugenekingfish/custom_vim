@@ -11,7 +11,7 @@
 Below is a list of the plugins that I use and that will be installed when running `:PluginInstall`. 
 I've included a brief description of what each plugin does, but would encourage you to visit the links yourself to see what they do in much greater detail. 
 
-If you don't want to install a particular plugin, simply remove the line(s) `Plugin '<plugin I don't want>'` from the `.vimrc` before running `:PluginInstall`.
+If you don't want to install a particular plugin, simply remove the line(s) `Plugin '<plugin I don't want>'` from `.vimrc` before running `:PluginInstall`.
 ### The plugins
 
 - [Vundle](https://github.com/VundleVim/Vundle.vim) - Vim plugin manager
