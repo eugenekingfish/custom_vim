@@ -61,7 +61,7 @@ cnoremap vv <Esc>
 inoremap VV <Esc>
 cnoremap cnoremap VV <Esc>
 
-map <C-F> :FZF<CR>
+map <F3> :FZF<CR>
 map <F2> :NERDTreeToggle<CR>
 map <C-k> ddkkp
 map <C-j> ddp
