@@ -13,12 +13,32 @@ endglobal
 
 context "math()"
 snippet mu "\mu" iA
-\mu$0
+\mu $0
+endsnippet
+
+context "math()"
+snippet tau "\tau" iA
+\tau $0
+endsnippet
+
+context "math()"
+snippet kap "\kappa" iA
+\kappa$0
+endsnippet
+
+context "math()"
+snippet rho "\rho" iA
+\rho $0
 endsnippet
 
 context "math()"
 snippet lamb "\lambda" iA
 \lambda$0
+endsnippet
+
+context "math()"
+snippet under "\underbrace" iA
+\underbrace
 endsnippet
 
 context "math()"
@@ -47,8 +67,8 @@ snippet phy "\varphi" iA
 endsnippet
 
 context "math()"
-snippet psy "\psi" iA
-\psi
+snippet psi "\psi" iA
+\psi $0
 endsnippet
 
 context "math()"
@@ -59,6 +79,16 @@ endsnippet
 context "math()"
 snippet to "\to" iA
 \to
+endsnippet
+
+context "math()"
+snippet dag "\dagger" iA
+\dag $1
+endsnippet
+
+context "math()"
+snippet gad "\ddagger" iA
+\dagger $1
 endsnippet
 
 context "math()"
@@ -210,6 +240,11 @@ snippet in "\in" iA
 \in$0
 endsnippet
 
+context "math()"
+snippet cdot "\cdot" iA
+\cdot $1
+endsnippet
+
 snippet math "math environment" bA
 \[
 	$1
@@ -232,12 +267,12 @@ endsnippet
 
 context "math()"
 snippet br "\brac{}" iA
-\\brac{$1}
+\brac{ $1 } $0
 endsnippet
 
 context "math()"
 snippet sb "\sbrac{}" iA
-\sbrac{$1}
+\sbrac{ $1 } $0
 endsnippet
 
 context "math()"
@@ -290,11 +325,6 @@ snippet mat "\mat" iA
 endsnippet
 
 context "math()"
-snippet ghost "\phantom{}" iA
-\\phantom{$1}
-endsnippet
-
-context "math()"
 snippet overl "\overline{}" iA
 \overline{$1}
 endsnippet
@@ -308,25 +338,23 @@ snippet sup "\textsuperscript{}" i
 \textsuperscript{$1}
 endsnippet
 
-snippet st "\textsuperscript{st}" i
-\textsuperscript{st}
-endsnippet
-
-snippet nd "\textsuperscript{nd}" i
-\textsuperscript{nd}
-endsnippet
-
-snippet rd "\textsuperscript{rd}" i
-\textsuperscript{rd}
-endsnippet
-
-snippet th "\textsuperscript{th}" i
-\textsuperscript{th}
-endsnippet
-
 context "math()"
 snippet bb "\mathbb{}" iA
 \bb{$1}
+endsnippet
+
+context "math()"
+snippet mf "\mathfrak{}" iA
+\mf{$1}
+endsnippet
+
+snippet bf "\mathbf{}" iA
+\mathbf{$1}
+endsnippet
+
+context "math()"
+snippet w~ "\widetilde{}" iA
+\widetilde{ $1 }$2
 endsnippet
 
 context "math()"
@@ -364,6 +392,11 @@ snippet O+ "\bigoplus" iA
 endsnippet
 
 context "math()"
+snippet phan "\phantom{}" iA
+\phantom{$1}
+endsnippet
+
+context "math()"
 snippet o* "\oplus" iA
 \otimes
 endsnippet
@@ -372,6 +405,15 @@ context "math()"
 snippet O* "\bigoplus" iA
 \bigotimes
 endsnippet
+
+context "math()"
+snippet ast "\ast" iA
+\ast
+endsnippet
+
+context "math()"
+
+
 
 priority 10000
 snippet 'sympy(.*)sympy' "evaluate sympy" wr
