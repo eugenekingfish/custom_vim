@@ -16,15 +16,18 @@ If you don't want to install a particular plugin, simply remove the line(s) `Plu
 
 - [Vundle](https://github.com/VundleVim/Vundle.vim) - Vim plugin manager
 - [NERDTree](https://github.com/preservim/nerdtree) - File explorer 
+- [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) - Git integration for NERDTree
 - [indentLine](https://github.com/Yggdroot/indentLine) - Vertical lines displayed for line indents
 - [vim-easymotion](https://github.com/easymotion/vim-easymotion) - Powerful navigation tool
 - [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
-- [vim-eldar](https://github.com/agude/vim-eldar) - Colour theme
+- [everforest](https://github.com/sainnhe/everforest) - Colour theme
 - [vim-airline](https://github.com/vim-airline/vim-airline) - Visual bar showing useful information
 - [UltiSnips](https://github.com/SirVer/ultisnips) - Powerful macro building tool
 - [vimtex](https://github.com/lervag/vimtex) - LaTeX integration
 - [vim-cool](https://github.com/romainl/vim-cool) - Better highlighting
-- [vim-startify](https://github.com/mhinz/vim-startify/) - Start screen manager
+- [goyo.vim](https://github.com/junegunn/goyo.vim/) - Nice writing mode
+- [rainbow](https://github.com/luochen1990/rainbow) - Colourful scoped braces
+- [vim-devicons](https://github.com/ryanoasis/vim-devicons) - Nice icon support
 
 ## The my_snips directory
 
