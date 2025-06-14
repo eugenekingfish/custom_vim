@@ -6,9 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim " Vundle default
 call vundle#begin() 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'yggdroot/indentline'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf'
 Plugin 'sainnhe/everforest'
 Plugin 'vim-airline/vim-airline'
