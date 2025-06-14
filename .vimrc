@@ -1,4 +1,5 @@
 set nocp " Vundle default
+set noswapfile nobackup dir =~/tmp 
 filetype off " Vundle default
 
 set rtp+=~/.vim/bundle/Vundle.vim " Vundle default 
@@ -7,81 +8,120 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'yggdroot/indentline'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/fzf'
-Plugin 'agude/vim-eldar'
+Plugin 'sainnhe/everforest'
 Plugin 'vim-airline/vim-airline'
-Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips' 
 Plugin 'lervag/vimtex'
 Plugin 'romainl/vim-cool'
-Plugin 'mhinz/vim-startify'
+"Plugin 'ycm-core/YouCompleteMe'
+Plugin 'junegunn/goyo.vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'ryanoasis/vim-devicons'
 call vundle#end()            
 
-filetype plugin indent on " Vundle default
-
-set hlsearch
-set incsearch
-set encoding=UTF-8
-set wildmenu " Enables more autocompletion options when pressing TAB in command mode
-set noswapfile nobackup dir =~/tmp 
-set et " Replaces tabs with spaces in insert mode
-set ts=3 " Sets the number of spaces for a tab in insert mode to be 3 (the default is 8)
-set shiftwidth=3 " When using the >> or << commands, sets the shift to be 3 (the same as a tab)
-
-""""""""""""""""""""""""
-""""""""""""""""""""""""
-""""" LINE NUMBERS """""
-""""""""""""""""""""""""
-""""""""""""""""""""""""
-
-set rnu " Enables relative line numbers
-set numberwidth=10 " Adds a left-margin
-
-if has('syntax')
- syntax enable             " Turn on syntax highlighting
- silent! colorscheme eldar " Custom color scheme
+if has ('termguicolors')
+   set termguicolors
 endif
 
-let g:tex_conceal = "" " Disables default 'admgs' behaviour of tex_conceal
+let g:everforest_better_performance = 1
+let g:everforest_background = 'medium'
+
+
+filetype plugin indent on " Vundle default
+set hlsearch 
+set incsearch
+set wildmenu 
+set background=dark
+set et 
+set ts=3 
+set shiftwidth=3 
+set nu
+set nuw=10
+
+if has('syntax')
+ syntax enable             
+ silent! colorscheme everforest
+endif
+
+let g:tex_conceal = "" 
 let g:vimtex_syntax_conceal_disable = 1
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_view_forward_search_on_start = 0
-set formatoptions-=cro " Disables comments automatically beginning on creation of newline
+let g:vimtex_indent_on_ampersands = 0
+let g:vimtex_compiler_progname = 'nvr'
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf,bibtex,pdf'
+set formatoptions-=cro 
 
-" Remaps the default enter normal mode key to vv or VF 
 inoremap vv <Esc>
 cnoremap vv <Esc>
 inoremap VV <Esc>
-cnoremap VV <Esc>
+cnoremap cnoremap VV <Esc>
 
 map <C-F> :FZF<CR>
+map <F2> :NERDTreeToggle<CR>
+map <C-k> ddkkp
+map <C-j> ddp
+map <C-h> <C-wh>
 
-nnoremap tt gT " Rebinding the move back a tab command
-
-""""""""""""""""""""""""
-""""""""""""""""""""""""
-"""" SPELL CHECKING """"
-""""""""""""""""""""""""
-""""""""""""""""""""""""
-
-setlocal spell " Highlights words spelt incorrectly
-set spelllang=en_gb " Spell checking language
-
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+nnoremap tt gT 
 
 nnoremap <Space> <NOP>
 xnoremap <Space> <NOP>
-nmap <Space> <Plug>(easymotion-prefix)
-map <F2> :NERDTreeToggle<CR>
+let mapleader = " "
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
-let g:markdown_syntax_conceal=0
+map <C-n> <Plug>(easymotion-bd-f)
+nmap <C-n> <Plug>(easymotion-overwin-f)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+let g:rainbow_active = 1
+
+setlocal spell 
+set spelllang=en_gb 
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u 
+
+" Initialize configuration dictionary
+let g:fzf_vim = {}
+
+let g:markdown_syntax_conceal = 0
 let g:vim_json_syntax_conceal = 0
+
+let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_auto_trigger = 0
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my_snips"]
+let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
+let g:UltiSnipsSnippetDirectories = ["my_snips"]
+
+let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_filetype_blacklist = {
+    \ '.tex': 1,
+    \ }
+autocmd FileType tex let b:ycm_largefile=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:airline#extensions#tabline#enabled = 1 " Enables better tabs from vim-airline
+let g:airline#extensions#tabline#enabled = 1 
+
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'!',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'?',
+                \ 'Renamed'   :'->',
+                \ 'Unmerged'  :'=',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'o_O',
+                \ }
