@@ -1,0 +1,14 @@
+snippet dfne "shortcut for #define" iA
+#define $0
+endsnippet
+
+snippet ifndef "shortcut for #ifndef ... #define ... #endif" iA
+#ifndef $1
+#define $1
+$0
+#endif $1
+endsnippet
+
+snippet std "shortcut for std::" iA
+std::$0
+endsnippet
