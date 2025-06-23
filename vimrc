@@ -15,7 +15,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'SirVer/ultisnips' 
 Plugin 'lervag/vimtex'
 Plugin 'romainl/vim-cool'
-"Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'junegunn/goyo.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'ryanoasis/vim-devicons'
@@ -27,7 +27,6 @@ endif
 
 let g:everforest_better_performance = 1
 let g:everforest_background = 'medium'
-
 
 filetype plugin indent on " Vundle default
 set hlsearch 
@@ -80,6 +79,8 @@ map <Leader>h <Plug>(easymotion-linebackward)
 map <C-n> <Plug>(easymotion-bd-f)
 nmap <C-n> <Plug>(easymotion-overwin-f)
 
+nnoremap <leader>f :FZF<CR>
+
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 let g:rainbow_active = 1
 
@@ -93,13 +94,15 @@ let g:fzf_vim = {}
 let g:markdown_syntax_conceal = 0
 let g:vim_json_syntax_conceal = 0
 
-let g:ycm_key_invoke_completion = '<C-Space>'
-let g:ycm_auto_trigger = 0
+" let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_auto_trigger = 1
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 let g:UltiSnipsSnippetDirectories = ["my_snips"]
+nnoremap <leader>us :call UltiSnips#RefreshSnippets()<CR>
 
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_filetype_blacklist = {
