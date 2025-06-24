@@ -67,8 +67,6 @@ map <C-j> ddp
 map <C-h> <C-wh>
 
 nnoremap tt gT 
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>q :tabclose<CR>
 nnoremap <Space> <NOP>
 xnoremap <Space> <NOP>
 let mapleader = " "
@@ -80,6 +78,8 @@ map <Leader>h <Plug>(easymotion-linebackward)
 map <C-n> <Plug>(easymotion-bd-f)
 nmap <C-n> <Plug>(easymotion-overwin-f)
 
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>q :tabclose<CR>
 nnoremap <leader>f :FZF<CR>
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
