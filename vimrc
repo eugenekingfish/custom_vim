@@ -67,7 +67,8 @@ map <C-j> ddp
 map <C-h> <C-wh>
 
 nnoremap tt gT 
-
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>q :tabclose<CR>
 nnoremap <Space> <NOP>
 xnoremap <Space> <NOP>
 let mapleader = " "
